@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.layout-breadcrumb {
+  margin-top: rem(8);
+}
+.layout-breadcrumb--status-404 {
+  margin-top: rem(80);
+
+  @include mq("md") {
+    margin-top: rem(90);
+  }
+}

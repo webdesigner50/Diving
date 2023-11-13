@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.breadcrumb {
+  font-size: rem(14);
+  font-weight: $regular;
+  font-family: $base-font-family;
+}
+.breadcrumb--status-404 {
+  padding-top: rem(8);
+  background-color: $green1;
+  color: $white;
+}
