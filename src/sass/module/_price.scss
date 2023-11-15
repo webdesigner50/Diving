@@ -101,6 +101,8 @@
   display: inline-block;
   width: 69.275%;
   text-align: center;
+  padding-top: rem(17.5);
+  padding-bottom: rem(17.5);
   @include mq("md") {
     width: 67.6%;
     text-align: left;
@@ -109,6 +111,10 @@
       display: none;
     }
   }
+}
+.price__course--top {
+  padding-top: rem(8);
+  padding-bottom: 0;
 }
 .price__price {
   display: inline-block;
@@ -122,4 +128,8 @@
     width: 32.4%;
     padding-right: rem(16);
   }
+}
+.price__price--top {
+  padding-top: rem(8);
+  padding-bottom: 0;
 }

@@ -72,33 +72,28 @@ textarea {
     align-items: center;
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1bfb77f0c427b3fabf37ac70cd22f6c48b028cb5
 .contact-form dt {
   width: 100%;
   @include mq("md") {
     width: 36%;
   }
 }
-<<<<<<< HEAD
 .contact-form dd {
   width: 100%;
   @include mq("md") {
     width: 64%;
-=======
+  }
+}
 .contact-form dd {
   width: 100%;
   @include mq("md") {
     width: 64%;
-=======
+  }
+}
 .contact-form dd {
   width: 100%;
   @include mq("md") {
     width: calc(100% - rem(220));
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
->>>>>>> 1bfb77f0c427b3fabf37ac70cd22f6c48b028cb5
   }
 }
 .contact-form__name {
@@ -125,16 +120,10 @@ textarea {
 }
 .contact-form__email-input {
   padding: rem(8) rem(16) rem(8);
-<<<<<<< HEAD
-=======
+  [type="tel"] {
+    max-width: rem(200);
+  }
 }
-<<<<<<< HEAD
-=======
-[type="tel"] {
-  max-width: rem(200);
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
-}
->>>>>>> 1bfb77f0c427b3fabf37ac70cd22f6c48b028cb5
 // [type="tel"] {
 //   max-width: rem(200);
 // }
@@ -147,10 +136,6 @@ textarea {
     margin-top: rem(40);
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1bfb77f0c427b3fabf37ac70cd22f6c48b028cb5
 // .contact-form__tel dd {
 .contact-form__tel-input {
   padding: rem(8) rem(16) rem(8);
@@ -158,13 +143,9 @@ textarea {
   @include mq("md") {
     margin-left: rem(-65);
   }
-<<<<<<< HEAD
-=======
-=======
+}
 .contact-form__tel-input {
   padding: rem(8) rem(16) rem(8);
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
->>>>>>> 1bfb77f0c427b3fabf37ac70cd22f6c48b028cb5
 }
 [type="checkbox"] {
   display: none;

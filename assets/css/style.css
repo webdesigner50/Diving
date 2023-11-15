@@ -646,6 +646,14 @@ a {
 	display: block; /* 最初の年が open クラスを持っている場合に月リストを表示 */
 }
 
+.blog-archive__year {
+	color: #408f95;
+}
+
+.blog-archive__year span {
+	transform: rotate(90deg);
+}
+
 .blog-campaign__inner {
 	margin-left: 1.5625rem;
 	margin-right: 1.5625rem;
@@ -1343,6 +1351,14 @@ textarea:focus {
 	width: 100%;
 }
 
+.contact-form dd {
+	width: 100%;
+}
+
+.contact-form dd {
+	width: 100%;
+}
+
 .contact-form__name {
 	border-bottom: 1px dashed #408f95;
 	margin-top: 0.9375rem;
@@ -1363,6 +1379,10 @@ textarea:focus {
 	padding: 0.5rem 1rem 0.5rem;
 }
 
+.contact-form__email-input [type=tel] {
+	max-width: 12.5rem;
+}
+
 .contact-form__tel {
 	border-bottom: 1px dashed #408f95;
 	margin-top: 1.5625rem;
@@ -1373,6 +1393,10 @@ textarea:focus {
 .contact-form__tel-input {
 	padding: 0.5rem 1rem 0.5rem;
 	width: 100%;
+}
+
+.contact-form__tel-input {
+	padding: 0.5rem 1rem 0.5rem;
 }
 
 [type=checkbox] {
@@ -2321,8 +2345,6 @@ html {
 .price-list__item {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 1rem;
-	row-gap: 1.125rem;
 }
 
 .price-list__item dt {
@@ -2419,8 +2441,15 @@ html {
 
 .price__course {
 	display: inline-block;
+	padding-bottom: 1.09375rem;
+	padding-top: 1.09375rem;
 	text-align: center;
 	width: 69.275%;
+}
+
+.price__course--top {
+	padding-bottom: 0;
+	padding-top: 0.5rem;
 }
 
 .price__price {
@@ -2431,6 +2460,11 @@ html {
 	padding-top: 1.09375rem;
 	text-align: right;
 	width: 30.725%;
+}
+
+.price__price--top {
+	padding-bottom: 0;
+	padding-top: 0.5rem;
 }
 
 .inner.privacy-policy__inner {
@@ -3733,6 +3767,14 @@ html {
 	width: 64%;
 }
 
+.contact-form dd {
+	width: 64%;
+}
+
+.contact-form dd {
+	width: calc(100% - 13.75rem);
+}
+
 .contact-form__name {
 	margin-top: -0.625rem;
 }
@@ -4047,10 +4089,6 @@ html {
 .price-list__title {
 	font-weight: 500;
 	padding: 0.4375rem 0;
-}
-
-.price-list__item {
-	row-gap: 1.0625rem;
 }
 
 .price-list__item dt {

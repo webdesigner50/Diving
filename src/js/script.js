@@ -161,7 +161,6 @@ jQuery(function ($) {
     });
   });
 
-<<<<<<< HEAD
   // タブクリック時のカレント設定
   let currentUrl = window.location.href;
   $(".js-categories-item").each(function () {
@@ -171,8 +170,6 @@ jQuery(function ($) {
     }
   });
 
-=======
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
   $(document).ready(function () {
     // Information - tab
     $(window).on("hashchange", function () {
@@ -181,12 +178,10 @@ jQuery(function ($) {
     // ハッシュの値に応じてタブをアクティブにする関数
     function activateTabFromHash() {
       var hash = window.location.hash; // 現在のハッシュを取得
-<<<<<<< HEAD
       var index = getIndexFromHash(hash);
 
       // すべてのタブとコンテンツのアクティブ状態を初期化
       $(".js-information-tab").removeClass("is-active");
-=======
       // var index = getIndexFromHash(hash);
       // if (index !== null) {
       //   scrollToSection(index);
@@ -196,7 +191,6 @@ jQuery(function ($) {
       // すべてのタブとコンテンツのアクティブ状態を初期化
       $(".js-information-tab").removeClass("is-active");
       // $(".js-information-card").removeClass("is-active");
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
 
       // ハッシュが存在する場合、該当するタブとコンテンツをアクティブにする
       if (hash) {
@@ -209,19 +203,14 @@ jQuery(function ($) {
         // 対応するコンテンツをアクティブにする
         $(contentId).addClass("is-active");
         var index = getIndexFromHash(hash);
-<<<<<<< HEAD
-=======
         if (index !== null) {
           // scrollToSection(index);
         }
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
       } else {
         // ハッシュが存在しない場合、1件目のタブとコンテンツをアクティブにする
         $(".js-information-tab:first").addClass("is-active");
         $(".js-information-content:first").addClass("is-active");
       }
-<<<<<<< HEAD
-=======
       // セクションまでスクロールする処理
       // function scrollToSection(index) {
       //   const headerHeight = $(".js-header").height();
@@ -231,18 +220,14 @@ jQuery(function ($) {
 
       //   $("body,html").animate({ scrollTop: position }, 500, "swing");
       // }
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
     }
     // 別ページから遷移した際の処理
     $(window).on("load", function () {
       var hash = window.location.hash;
       var index = getIndexFromHash(hash);
-<<<<<<< HEAD
-=======
       if (index !== null) {
         // scrollToSection(index);
       }
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
     });
     // 最初のタブをデフォルトで表示
     $(".js-information-content:first-of-type").css("display", "block");
@@ -293,8 +278,6 @@ jQuery(function ($) {
       let targetTop = target.offset().top; // ターゲット要素の上端位置を取得
       let position = targetTop - headerHeight;
 
-<<<<<<< HEAD
-=======
       // タブメニューの上にスクロールが止まるように調整
       // let tabMenuContainerHeight = $("#info").height();
       // position -= tabMenuContainerHeight;
@@ -302,7 +285,6 @@ jQuery(function ($) {
       // さらに微調整
       // position -= headerHeight; // 24px だけタブメニューがかかる程度に調整
 
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
       $("body,html").animate({ scrollTop: position }, 500, "swing");
     }
   });
@@ -327,7 +309,6 @@ jQuery(function ($) {
     return false;
   });
   // blogアーカイブメニュー
-<<<<<<< HEAD
   // $(function () {
   //   const toggleButtons = document.querySelectorAll(".blog-archive__year");
   //   const toggleDivs = document.querySelectorAll(".blog-archive__month");
@@ -342,7 +323,6 @@ jQuery(function ($) {
   //     });
   //   });
   // });
-=======
   $(function () {
     const toggleButtons = document.querySelectorAll(".blog-archive__year");
     const toggleDivs = document.querySelectorAll(".blog-archive__month");
@@ -357,7 +337,6 @@ jQuery(function ($) {
       });
     });
   });
->>>>>>> 28f47392f9a34e7713be1327debc5dd6071e7bfb
 
   // voiceタブメニュー
   $(function () {

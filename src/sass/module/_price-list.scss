@@ -14,13 +14,13 @@
 }
 
 .price-list__item {
-  margin-top: rem(16);
+  // margin-top: rem(16);
   display: flex;
   flex-wrap: wrap;
-  row-gap: rem(18);
+  // row-gap: rem(18);
 
   @include mq("md") {
-    row-gap: rem(17);
+    // row-gap: rem(17);
   }
 }
 
