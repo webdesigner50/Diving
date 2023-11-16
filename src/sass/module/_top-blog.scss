@@ -34,8 +34,8 @@
   @include mq("md") {
     content: "";
     position: absolute;
-    width: rem(301);
-    height: rem(138);
+    width: rem(437);
+    height: rem(201);
     top: rem(-76);
     left: calc(50% - min(48.5vw, rem(600)));
     background-image: url(../images/common/top-blog-fish1.png);
@@ -52,7 +52,7 @@
   @include mq("md") {
     padding: 0;
     margin-top: rem(80);
-    display: flex;
+    display: grid;
     justify-content: space-between;
   }
 }

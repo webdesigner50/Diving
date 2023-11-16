@@ -271,7 +271,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
             <div class="blog-card__meta">
               <time class="blog-card__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
-            <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 15, '…'); ?><</h3>
+            <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 15, '…'); ?></h3>
             <p class="blog-card__text"><?php the_excerpt(); ?></p>
           </div>
         </a>
