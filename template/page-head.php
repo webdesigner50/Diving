@@ -62,17 +62,17 @@ if (is_post_type_archive('campaign') || is_tax('campaign_category')) {
   $alt = '波の写真';
 
   // サイトマップ
-} elseif (is_page('site-map')) {
+} elseif (is_page('sitemap')) {
   $page_title = 'site MAP';
-  $page_img_sp = '/assets/images/common/site-map-mv-sp-img.jpg';
-  $page_img_pc = '/assets/images/common/site-map-mv-pc-img.jpg';
+  $page_img_sp = '/assets/images/common/sitemap-mv-sp-img.jpg';
+  $page_img_pc = '/assets/images/common/sitemap-mv-pc-img.jpg';
   $alt = '熱帯魚';
 
   // プライバシー
-} elseif (is_page('privacy-policy')) {
+} elseif (is_page('privacypolicy')) {
   $page_title = 'Privacy Policy';
-  $page_img_sp = '/assets/images/common/privacy-policy-mv-sp-img.jpg';
-  $page_img_pc = '/assets/images/common/privacy-policy-mv-pc-img.jpg';
+  $page_img_sp = '/assets/images/common/privacypolicy-mv-sp-img.jpg';
+  $page_img_pc = '/assets/images/common/privacypolicy-mv-pc-img.jpg';
   $alt = '熱帯魚';
 
   // 利用規約

@@ -40,13 +40,11 @@
                       <div class="voice-card__meta">
                         <?php
                         $age = get_field('voice-age');
-                        // $gender = get_field('voice-gender');
                         ?>
                         <p class="voice-card__age">
                             <?php if ($age): ?>
                               <?php echo esc_html($age); ?>
                             <?php endif; ?>
-                            <!-- (<?php echo esc_html($gender); ?>) -->
                         </p>
                         <?php $term = get_the_terms($post->ID, 'voice_category');
                           if ($term) : ?>

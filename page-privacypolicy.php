@@ -12,10 +12,10 @@
         <?php get_template_part('template/breadcrumb'); ?>
       </div>
 
-      <section class="privacy-policy layout-privacy-policy">
-        <div class="privacy-policy__inner inner">
-          <p class="privacy-policy__title"><?php the_title(); ?></p>
-          <div class="privacy-policy__contents">
+      <section class="privacypolicy layout-privacypolicy">
+        <div class="privacypolicy__inner inner">
+          <p class="privacypolicy__title"><?php the_title(); ?></p>
+          <div class="privacypolicy__contents">
             <?php the_content(); ?>
           </div>
         </div>

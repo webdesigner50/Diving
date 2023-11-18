@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: top
+*/
+?>
+
 <?php get_header(); ?>
 
 <?php
@@ -13,7 +19,7 @@ $voice = esc_url( home_url( '/voice/' ) );
 $price = esc_url( home_url( '/price/' ) );
 $faq = esc_url( home_url( '/faq/' ) );
 $contact = esc_url( home_url( '/contact/' ) );
-$policy = esc_url( home_url( '/privacy-policy/' ) );
+$policy = esc_url( home_url( '/privacypolicy/' ) );
 $terms = esc_url( home_url( '/terms-of-service/' ) );
 $sitemap = esc_url( home_url( '/sitemap/' ) );
 ?>
@@ -30,30 +36,28 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
         <div class="top-mv__inner">
           <div class="top-mv__slider swiper js-top-mv-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-pc-img1.jpg" media="(min-width: 768px)" />
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-sp-img1.jpg" alt="海底にいるウミガメの様子" />
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-pc-img2.jpg" media="(min-width: 768px)" />
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-sp-img2.jpg" alt="ダイバーが海中でウミガメと遭遇して撮影している様子" />
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-pc-img3.jpg" media="(min-width: 768px)" />
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-sp-img3.jpg" alt="海上の様子" />
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-pc-img4.jpg" media="(min-width: 768px)" />
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/top-mv-sp-img4.jpg" alt="綺麗な砂浜の様子" />
-                </picture>
-              </div>
+
+              <?php $fields = CFS()->get('top_group'); ?>
+              <?php if ($fields) : ?>
+                <?php
+                //投稿のIDを取得
+                $fields = CFS()->get('top_group', get_the_ID());
+                foreach ((array)$fields as $field): ?>
+
+                    <div class="swiper-slide">
+                      <picture>
+                        <?php
+                        // CFSで画像URLを取得する ?>
+                        <source srcset="<?php echo $field['top_photo']; ?>" media="(min-width: 768px)" />
+                        <img src="<?php echo $field['top_photo']; ?>" alt="トップページのMV">
+                        <?php
+                        ?>
+                      </picture>
+                    </div>
+                <?php endforeach; ?>
+              <?php endif; ?>
+
+
             </div>
             <div class="top-mv__title">
               <h2 class="top-mv__main-title">diving</h2>
@@ -183,7 +187,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
     <div class="swiper-button-prev top-campaign__swiper-button-prev js-top-campaign-swiper-button-prev u-desktop"></div>
     <div class="swiper-button-next top-campaign__swiper-button-next js-top-campaign-swiper-button-next u-desktop"></div>
     <div class="top-campaign__button">
-      <a href="#" class="button"><span>view&nbsp;nmore</span></a>
+      <a href="#" class="button"><span>view&nbsp;more</span></a>
     </div>
   </div>
 </section>

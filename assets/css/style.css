@@ -190,11 +190,11 @@ a {
 	margin-top: 3.1875rem;
 }
 
-.layout-privacy-policy {
+.layout-privacypolicy {
 	margin-top: 3.4375rem;
 }
 
-.layout-site-map {
+.layout-sitemap {
 	margin-top: 0;
 }
 
@@ -292,6 +292,10 @@ a {
 
 .layout-top-footer--contact {
 	margin-top: 9.0625rem;
+}
+
+.layout-top-footer--404 {
+	padding-top: 6.5625rem;
 }
 
 .layout-top-information {
@@ -1354,14 +1358,6 @@ textarea:focus {
 	width: 100%;
 }
 
-.contact-form dd {
-	width: 100%;
-}
-
-.contact-form dd {
-	width: 100%;
-}
-
 .contact-form__name {
 	border-bottom: 1px dashed #408f95;
 	margin-top: 0.9375rem;
@@ -1382,10 +1378,6 @@ textarea:focus {
 	padding: 0.5rem 1rem 0.5rem;
 }
 
-.contact-form__email-input [type=tel] {
-	max-width: 12.5rem;
-}
-
 .contact-form__tel {
 	border-bottom: 1px dashed #408f95;
 	margin-top: 1.5625rem;
@@ -1396,10 +1388,6 @@ textarea:focus {
 .contact-form__tel-input {
 	padding: 0.5rem 1rem 0.5rem;
 	width: 100%;
-}
-
-.contact-form__tel-input {
-	padding: 0.5rem 1rem 0.5rem;
 }
 
 [type=checkbox] {
@@ -1484,10 +1472,6 @@ select { /*↓デフォルトのアイコンを消す場合はコメントアウ
 	border-bottom: 1px dashed #408f95;
 	margin-top: 1.5625rem;
 	padding-bottom: 1.375rem;
-}
-
-.contact-form__select-data-input {
-	padding: 0.6875rem 0.5rem;
 }
 
 .contact-form__textarea {
@@ -1875,7 +1859,7 @@ div.wpcf7-aborted {
 	width: 100%;
 }
 
-.footer-nav--site-map {
+.footer-nav--sitemap {
 	background-color: #fff;
 	color: #0d2936;
 }
@@ -1935,8 +1919,8 @@ div.wpcf7-aborted {
 	width: 1.125rem;
 }
 
-.footer-nav__left-item--site-map:first-child a::before,
-.footer-nav__right-item--site-map:first-child a::before {
+.footer-nav__left-item--sitemap:first-child a::before,
+.footer-nav__right-item--sitemap:first-child a::before {
 	background-image: url(../images/common/menu-icon-black.png);
 }
 
@@ -1951,7 +1935,7 @@ div.wpcf7-aborted {
 	padding-top: 2.875rem;
 }
 
-.footer--site-map {
+.footer--sitemap {
 	background-color: #fff;
 	padding-bottom: 5.625rem;
 	padding-top: 0.625rem;
@@ -2470,13 +2454,13 @@ html {
 	padding-top: 0.5rem;
 }
 
-.inner.privacy-policy__inner {
+.inner.privacypolicy__inner {
 	max-width: 37.5rem;
 	position: relative;
 	width: 100%;
 }
 
-.privacy-policy__inner::before {
+.privacypolicy__inner::before {
 	background-image: url(../images/common/top-voice-fish2.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -2489,33 +2473,33 @@ html {
 	width: 7.5rem;
 }
 
-.privacy-policy__title {
+.privacypolicy__title {
 	font-size: 1.5rem;
 	font-weight: 500;
 }
 
-.privacy-policy__contents {
+.privacypolicy__contents {
 	margin-top: 2.5rem;
 	text-align: left;
 }
 
-.privacy-policy__contents ol li {
+.privacypolicy__contents ol li {
 	list-style: decimal;
 	margin-left: 1em;
 }
 
-.privacy-policy__contents p {
+.privacypolicy__contents p {
 	font-weight: 300;
 	margin-top: 2.5rem;
 }
 
-.inner.site-map__inner {
+.inner.sitemap__inner {
 	max-width: 37.5rem;
 	position: relative;
 	width: 100%;
 }
 
-.site-map__inner::before {
+.sitemap__inner::before {
 	background-image: url(../images/common/top-voice-fish2.png);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -3207,11 +3191,11 @@ html {
 	margin-top: 9.375rem;
 }
 
-.layout-privacy-policy {
+.layout-privacypolicy {
 	margin-top: 9.6875rem;
 }
 
-.layout-site-map {
+.layout-sitemap {
 	margin-top: 2.5rem;
 }
 
@@ -3263,7 +3247,7 @@ html {
 	margin-top: 14.375rem;
 }
 
-.layout-contact--privacy-policy {
+.layout-contact--privacypolicy {
 	padding-top: 8.5625rem;
 }
 
@@ -3297,6 +3281,10 @@ html {
 
 .layout-top-footer--status-404 {
 	margin-top: 7.8125rem;
+}
+
+.layout-top-footer--404 {
+	padding-top: 10rem;
 }
 
 .layout-top-information {
@@ -3766,14 +3754,6 @@ html {
 	width: 64%;
 }
 
-.contact-form dd {
-	width: 64%;
-}
-
-.contact-form dd {
-	width: calc(100% - 13.75rem);
-}
-
 .contact-form__name {
 	margin-top: -0.625rem;
 }
@@ -3972,7 +3952,7 @@ html {
 	padding-top: 5rem;
 }
 
-.footer--site-map {
+.footer--sitemap {
 	padding-bottom: 0;
 }
 
@@ -4147,26 +4127,26 @@ html {
 	width: 32.4%;
 }
 
-.inner.privacy-policy__inner {
+.inner.privacypolicy__inner {
 	max-width: 53.125rem;
 }
 
-.privacy-policy__inner::before {
+.privacypolicy__inner::before {
 	height: 8.625rem;
 	max-width: 80rem;
 	top: -4.375rem;
 	width: 18.8125rem;
 }
 
-.privacy-policy__title {
+.privacypolicy__title {
 	font-size: 2rem;
 }
 
-.inner.site-map__inner {
+.inner.sitemap__inner {
 	max-width: 70.625rem;
 }
 
-.site-map__inner::before {
+.sitemap__inner::before {
 	background-image: none;
 	height: 8.625rem;
 	max-width: 80rem;

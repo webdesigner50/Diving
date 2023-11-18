@@ -23,9 +23,9 @@ $voice = esc_url( home_url( '/voice/' ) );
 $price = esc_url( home_url( '/price/' ) );
 $faq = esc_url( home_url( '/faq/' ) );
 $contact = esc_url( home_url( '/contact/' ) );
-$policy = esc_url( home_url( '/privacy-policy/' ) );
+$policy = esc_url( home_url( '/privacypolicy/' ) );
 $terms = esc_url( home_url( '/terms-of-service/' ) );
-$sitemap = esc_url( home_url( '/site-map/' ) );
+$sitemap = esc_url( home_url( '/sitemap/' ) );
 ?>
 
   <body <?php body_class(); ?>>

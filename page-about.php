@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: about
+*/
+?>
+
 <?php get_header(); ?>
 
       <div class="campaign-mv mv">
@@ -42,29 +48,26 @@
           </div>
           <div class="about-gallery__content">
             <div class="about-gallery__modal js-modal-window"></div>
-            <ul class="about-gallery__image-items">
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img1.jpg" alt="海底の無数の赤い魚たち" />
-              </li>
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img2.jpg" alt="沖に停っている小型の船" />
-              </li>
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img3.jpg" alt="海底にいる二匹の魚たち" />
-              </li>
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img4.jpg" alt="海底にいる一匹の魚" />
-              </li>
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img5.jpg" alt="海底の無数の白い魚たち" />
-              </li>
-              <li class="about-gallery__image-item js-modal">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/about-Photo-img6.jpg" alt="海底にいる二匹の魚たちとその後ろの無数の魚たち" />
-              </li>
-            </ul>
+              <ul class="about-gallery__image-items">
+                <?php $fields = CFS()->get('about_group'); ?>
+                <?php if ($fields) : ?>
+                  <?php
+                  //投稿のIDを取得
+                  $fields = CFS()->get('about_group', get_the_ID());
+                  foreach ((array)$fields as $field): ?>
+
+                    <li class="about-gallery__image-item js-modal">
+                        <?php
+                        // CFSで画像URLを取得する ?>
+                        <img src="<?php echo $field['about_photo']; ?>" alt="ギャラリー画像">
+                        <?php
+                        ?>
+                    </li>
+                  <?php endforeach; ?>
+                <?php endif; ?>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-
-
-      <?php get_footer(); ?>
+<?php get_footer(); ?>

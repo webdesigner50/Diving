@@ -84,18 +84,6 @@ textarea {
     width: 64%;
   }
 }
-.contact-form dd {
-  width: 100%;
-  @include mq("md") {
-    width: 64%;
-  }
-}
-.contact-form dd {
-  width: 100%;
-  @include mq("md") {
-    width: calc(100% - rem(220));
-  }
-}
 .contact-form__name {
   margin-top: rem(15);
   padding-bottom: rem(25);
@@ -120,9 +108,6 @@ textarea {
 }
 .contact-form__email-input {
   padding: rem(8) rem(16) rem(8);
-  [type="tel"] {
-    max-width: rem(200);
-  }
 }
 // [type="tel"] {
 //   max-width: rem(200);
@@ -143,9 +128,6 @@ textarea {
   @include mq("md") {
     margin-left: rem(-65);
   }
-}
-.contact-form__tel-input {
-  padding: rem(8) rem(16) rem(8);
 }
 [type="checkbox"] {
   display: none;
@@ -253,13 +235,30 @@ select {
     margin-top: rem(50);
   }
 }
-.contact-form__select-data-input {
-  padding: rem(11) rem(8);
-}
+// .contact-form__select-data-input {
+//   padding: rem(11) rem(8);
+// }
+// [type="date"] {
+//   position: relative;
+//   /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
+//   appearance: auto;
+//   /*↓デフォルトではないアイコンを使う場合は入力する*/
+//   // background-image: url();
+//   // background-position: right 12px center;
+//   // background-repeat: no-repeat;
+//   &:focus {
+//     border-color: 1px solid $border-cr;
+//   }
+// }
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   opacity: 0;
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+// }
 
 .contact-form__textarea {
   margin-top: rem(30);
-  // max-width: rem(600);
   align-items: start;
   @include mq("md") {
     margin-top: rem(30);

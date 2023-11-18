@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.inner.site-map__inner {
+.inner.sitemap__inner {
   position: relative;
   width: 100%;
   max-width: rem(600);
@@ -8,7 +8,7 @@
     max-width: rem(1130);
   }
 }
-.site-map__inner::before {
+.sitemap__inner::before {
   content: "";
   position: absolute;
   width: rem(120);

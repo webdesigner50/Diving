@@ -11,12 +11,17 @@ $voice = esc_url( home_url( '/voice/' ) );
 $price = esc_url( home_url( '/price/' ) );
 $faq = esc_url( home_url( '/faq/' ) );
 $contact = esc_url( home_url( '/contact/' ) );
-$policy = esc_url( home_url( '/privacy-policy/' ) );
+$policy = esc_url( home_url( '/privacypolicy/' ) );
 $terms = esc_url( home_url( '/terms-of-service/' ) );
-$sitemap = esc_url( home_url( '/site-map/' ) );
+$sitemap = esc_url( home_url( '/sitemap/' ) );
 ?>
 
-<div class="contact layout-top-contact">
+
+<?php
+  // お問い合わせ と404じゃなかった時に表示
+  if (!is_page('contact') && !is_404()) {
+?>
+    <div class="contact layout-top-contact">
         <div class="contact__inner inner">
           <div class="contact__wrapper">
             <div class="contact__left">
@@ -65,13 +70,29 @@ $sitemap = esc_url( home_url( '/site-map/' ) );
             </div>
           </div>
         </div>
-      </div>
-    </main>
+    </div>
+<?php
+  }
+?>
+    
+      </main>
+<?php
+  // 404の時はパディング、それ意外はマージン
+  if (is_404()) {
+?>
+    <footer class="footer layout-top-footer--404">
+<?php
+  } else {
+?>
     <footer class="footer layout-top-footer">
-      <div class="footer__inner inner">
+<?php
+  }
+?>
+    <div class="footer__inner inner">
         <div class="footer__wrap">
           <div class="footer__logo">
-            <a href="index.html">
+            <!-- <a href="index.html"> -->
+            <a href="<?php echo $home ; ?>">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/footer-logo.svg" alt="ロゴ画像" />
             </a>
           </div>

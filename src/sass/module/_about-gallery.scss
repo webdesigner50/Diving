@@ -44,6 +44,9 @@
     aspect-ratio: 580 / 369;
   }
 }
+// img:not([alt]) {
+//   filter: none;
+// }
 
 .about-gallery__image-item:nth-child(6n + 1) img,
 .about-gallery__image-item:nth-child(6n + 6) img {

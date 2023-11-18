@@ -6,7 +6,7 @@
   background-color: $green1;
   color: $white;
 }
-.footer-nav--site-map {
+.footer-nav--sitemap {
   background-color: $white;
   color: $black1;
 }
@@ -79,8 +79,8 @@
   background-position: center;
   background-size: cover;
 }
-.footer-nav__left-item--site-map:first-child a::before,
-.footer-nav__right-item--site-map:first-child a::before {
+.footer-nav__left-item--sitemap:first-child a::before,
+.footer-nav__right-item--sitemap:first-child a::before {
   background-image: url(../images/common/menu-icon-black.png);
 }
 

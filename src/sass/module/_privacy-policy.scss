@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.inner.privacy-policy__inner {
+.inner.privacypolicy__inner {
   position: relative;
   width: 100%;
   max-width: rem(600);
@@ -8,7 +8,7 @@
     max-width: rem(850);
   }
 }
-.privacy-policy__inner::before {
+.privacypolicy__inner::before {
   content: "";
   position: absolute;
   width: rem(120);
@@ -26,22 +26,22 @@
     top: rem(-70);
   }
 }
-.privacy-policy__title {
+.privacypolicy__title {
   font-size: rem(24);
   font-weight: $medium;
   @include mq("md") {
     font-size: rem(32);
   }
 }
-.privacy-policy__contents {
+.privacypolicy__contents {
   margin-top: rem(40);
   text-align: left;
 }
-.privacy-policy__contents ol li {
+.privacypolicy__contents ol li {
   list-style: decimal;
   margin-left: 1em;
 }
-.privacy-policy__contents p {
+.privacypolicy__contents p {
   margin-top: rem(40);
   font-weight: $regular;
 }
