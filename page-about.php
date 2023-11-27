@@ -6,7 +6,7 @@ Template Name: about
 
 <?php get_header(); ?>
 
-      <div class="campaign-mv mv">
+      <div class="about-mv mv">
         <div class="mv__inner">
           <!-- トップ画像 -->
           <?php get_template_part('template/page-head'); ?>
@@ -14,15 +14,17 @@ Template Name: about
       </div>
 
       <!-- ぱんくず -->
+      <div class="breadcrumb layout-breadcrumb inner">
       <?php get_template_part('template/breadcrumb'); ?>
+    </div>
 
       <section class="sub-about about-image layout-about">
-        <div class="about-image__inner inner">
+        <div class="about-image__inner about-image__inner--about inner">
           <div class="about-image__img-wrap">
             <div class="about-image__img-small u-desktop">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-about-img1.jpg" alt="瓦屋根の上にシーサーが乗っている様子" />
             </div>
-            <div class="about-image__img-big">
+            <div class="about-image__img-big about-image__img-big--about">
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-about-img2.jpg" alt="海中で黄色の魚が泳ぐ様子" />
             </div>
           </div>

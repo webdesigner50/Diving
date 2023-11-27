@@ -8,7 +8,9 @@
       </div>
 
       <!-- ぱんくず -->
-      <?php get_template_part('template/breadcrumb'); ?>
+      <div class="breadcrumb layout-breadcrumb inner">
+        <?php get_template_part('template/breadcrumb'); ?>
+      </div>
 
       <section class="campaign layout-campaign">
         <div class="campaign__inner inner">

@@ -7,9 +7,11 @@
         </div>
       </div>
 
+      <!-- ぱんくず -->
       <div class="breadcrumb layout-breadcrumb inner">
-      <?php get_template_part('template/breadcrumb'); ?>
+        <?php get_template_part('template/breadcrumb'); ?>
       </div>
+
       <section class="voice layout-voice">
         <div class="voice__inner inner">
           <ul class="voice__body category">

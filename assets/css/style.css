@@ -219,7 +219,7 @@ a {
 }
 
 .layout-about {
-	margin-top: 3.4375rem;
+	margin-top: 3.25rem;
 }
 
 .layout-blog-archive {
@@ -310,6 +310,10 @@ a {
 	margin-top: 5.1875rem;
 }
 
+.about-gallery__inner {
+	position: relative;
+}
+
 .about-gallery__content {
 	margin-top: 2.125rem;
 }
@@ -385,12 +389,18 @@ a {
 	position: relative;
 }
 
-.about-image__img-wrap {
-	margin-top: 1.5rem;
-}
-
-.about-image__img-wrap.about-image__img-wrap--noheading {
-	margin-top: 0;
+.about-image__inner--about::before {
+	background-image: url(../images/common/top-voice-fish2.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	height: 3.4375rem;
+	left: calc(50% - min(48.5vw, 38.75rem));
+	position: absolute;
+	top: -4.375rem;
+	width: 7.5rem;
+	z-index: -1;
 }
 
 .about-image__img-small {
@@ -408,11 +418,18 @@ a {
 }
 
 .about-image__img-big {
+	margin-left: auto;
+	margin-top: -49%;
+	width: 81.45%;
 	z-index: 1;
 }
 
-.about-image__img-big.top-about__img-big--bigger {
+.about-image__img-big--about {
 	margin-top: 0;
+	width: 100%;
+}
+
+.about-image__img-big.top-about__img-big--bigger {
 	width: 100%;
 }
 
@@ -429,8 +446,12 @@ a {
 }
 
 .about-image__content-wrap {
-	left: 19.8%;
-	margin-top: -13.125rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.about-image__content-wrap--top {
+	position: relative;
 }
 
 .about-image__content-title {
@@ -438,8 +459,15 @@ a {
 	display: block;
 	font-size: 2.5rem;
 	font-weight: 300;
+	left: 2.4375rem;
 	line-height: 1;
-	margin-left: 1.25rem;
+	position: absolute;
+	top: 1.5rem;
+}
+
+.about-image__content-title--top {
+	color: #408f95;
+	left: 0;
 }
 
 .about-image__title.top-about__title--on-img {
@@ -450,14 +478,15 @@ a {
 }
 
 .about-image__content-text-wrap {
-	margin-top: 10.625rem;
+	margin-top: 1rem;
 }
 
-.about-image__content-text-wrap.top-about__content-text-wrap--about-margin {
-	margin-top: 2.5rem;
+.about-image__content-text-wrap--top {
+	margin-top: 8.5rem;
 }
 
 .about-image__content-text {
+	color: #0d2936;
 	line-height: 1.5;
 }
 
@@ -494,7 +523,6 @@ a {
 .about__img-small img {
 	-o-object-fit: cover;
 	aspect-ratio: 128/194;
-	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
@@ -1346,8 +1374,7 @@ textarea:focus {
 .contact-form__checkbox1,
 .contact-form__select,
 .contact-form__textarea {
-	-moz-text-align-last: left;
-	text-align-last: left;
+	text-align: left;
 }
 
 .contact-form dt {
@@ -2250,6 +2277,19 @@ html {
 	text-transform: lowercase;
 }
 
+.page-head__img {
+	max-width: 90rem;
+	width: 100%;
+}
+
+.page-head__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 1440/548;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 .pc-nav {
 	color: #fff;
 }
@@ -2430,8 +2470,12 @@ html {
 	display: inline-block;
 	padding-bottom: 1.09375rem;
 	padding-top: 1.09375rem;
-	text-align: center;
+	text-align: left;
 	width: 69.275%;
+}
+
+.price__course br {
+	display: none;
 }
 
 .price__course--top {
@@ -3033,12 +3077,13 @@ html.is-fixed {
 .voice-card__title-wrap {
 	border-bottom: 0.0625rem solid #408f95;
 	margin-right: 0.8125rem;
+	max-width: 9.3125rem;
 	width: calc(51.758% - 0.8125rem);
 }
 
 .voice-card__img-wrap {
 	padding-top: 0.4375rem;
-	width: 48.242%;
+	width: 48.243%;
 }
 
 .voice-card__img-wrap img {
@@ -3220,7 +3265,7 @@ html {
 }
 
 .layout-about {
-	margin-top: 10.625rem;
+	margin-top: 11.125rem;
 }
 
 .layout-blog-contents-side {
@@ -3299,6 +3344,20 @@ html {
 	margin-top: 8.875rem;
 }
 
+.about-gallery__inner::before {
+	background-image: url(../images/common/top-contact-fish3.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 8.625rem;
+	position: absolute;
+	right: calc(50% - min(48.5vw, 40.625rem));
+	top: 0;
+	width: 18.8125rem;
+	z-index: -1;
+}
+
 .about-gallery__content {
 	margin-top: 5rem;
 }
@@ -3332,24 +3391,9 @@ html {
 	width: 100%;
 }
 
-.about-image__inner::before {
-	background-image: url(../images/common/top-contact-fish3.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-	content: "";
+.about-image__inner--about::before {
 	height: 8.625rem;
-	position: absolute;
-	right: calc(50% - min(48.5vw, 40.625rem));
-	top: 43.75rem;
-	width: 18.8125rem;
-	z-index: -1;
-}
-
-.about-image__inner.about-image__inner--change-illustration::before {
-	background-image: url(../images/common/fish3.png);
-	bottom: -11.125rem;
-	height: 8.625rem;
+	max-width: 80rem;
 	width: 18.8125rem;
 }
 
@@ -3380,6 +3424,8 @@ html {
 
 .about-image__content-wrap {
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	left: 18%;
 	margin-top: 0;
 	position: absolute;
@@ -3391,7 +3437,13 @@ html {
 .about-image__content-title {
 	font-size: 5rem;
 	line-height: 1.25;
+	margin-left: 0;
+	position: static;
 	width: 50%;
+}
+
+.about-image__content-title--top {
+	color: #fff;
 }
 
 .about-image__title.top-about__title--on-img {
@@ -3404,12 +3456,13 @@ html {
 	width: 55%;
 }
 
-.about-image__content-text-wrap.top-about__content-text-wrap--about-margin {
+.about-image__content-text-wrap--top {
 	margin-top: 0;
 }
 
 .about-image__content-text {
 	color: #fff;
+	margin-top: 0;
 }
 
 .about-image__illustration {
@@ -3747,11 +3800,11 @@ html {
 }
 
 .contact-form dt {
-	width: 36%;
+	width: 40%;
 }
 
 .contact-form dd {
-	width: 64%;
+	width: 50%;
 }
 
 .contact-form__name {
@@ -4061,6 +4114,10 @@ html {
 	font-size: 5rem;
 }
 
+.page-head__img img {
+	aspect-ratio: 375/460;
+}
+
 .pc-nav__item a:hover .pc-nav__item-wrap::after {
 	transform: scale(1, 1); /*マウスホバー時にX方向を1にして下線表示*/
 }
@@ -4116,10 +4173,6 @@ html {
 	padding-left: 0.9375rem;
 	text-align: left;
 	width: 67.6%;
-}
-
-.price__course br {
-	display: none;
 }
 
 .price__price {

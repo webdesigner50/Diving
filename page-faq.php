@@ -12,8 +12,8 @@ Template Name: FAQ
         </div>
       </div>
 
+      <!-- ぱんくず -->
       <div class="breadcrumb layout-breadcrumb inner">
-        <!-- ぱんくず -->
         <?php get_template_part('template/breadcrumb'); ?>
       </div>
 

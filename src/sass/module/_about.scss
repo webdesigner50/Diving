@@ -43,7 +43,6 @@
   aspect-ratio: 128 / 194;
   object-fit: cover;
   width: 100%;
-  height: 100%;
 
   @include mq("md") {
     aspect-ratio: 400 / 606;

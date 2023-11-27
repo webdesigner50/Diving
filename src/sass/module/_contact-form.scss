@@ -65,7 +65,7 @@ textarea {
 .contact-form__checkbox1,
 .contact-form__select,
 .contact-form__textarea {
-  text-align-last: left;
+  text-align: left;
   @include mq("md") {
     display: flex;
     justify-content: space-between;
@@ -75,13 +75,14 @@ textarea {
 .contact-form dt {
   width: 100%;
   @include mq("md") {
-    width: 36%;
+    width: 40%;
   }
 }
+
 .contact-form dd {
   width: 100%;
   @include mq("md") {
-    width: 64%;
+    width: 50%;
   }
 }
 .contact-form__name {

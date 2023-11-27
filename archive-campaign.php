@@ -1,3 +1,21 @@
+<?php
+$home = esc_url( home_url( '/' ) );
+$campaign = esc_url(home_url('/campaign'));
+$license = esc_url(home_url('/campaign_category/license/'));
+$fun_diving = esc_url(home_url('/campaign_category/fun-diving/'));
+$experience_diving = esc_url(home_url('/campaign_category/experience-diving/'));
+$about = esc_url( home_url( '/about/' ) );
+$information = esc_url( home_url( '/information/' ) );
+$blog = esc_url( home_url( '/blog/' ) );
+$voice = esc_url( home_url( '/voice/' ) );
+$price = esc_url( home_url( '/price/' ) );
+$faq = esc_url( home_url( '/faq/' ) );
+$contact = esc_url( home_url( '/contact/' ) );
+$policy = esc_url( home_url( '/privacypolicy/' ) );
+$terms = esc_url( home_url( '/terms-of-service/' ) );
+$sitemap = esc_url( home_url( '/sitemap/' ) );
+?>
+
 <?php get_header(); ?>
 
       <div class="campaign-mv mv">
@@ -67,7 +85,7 @@
                       <p class="campaign-card__text3"><?php the_field('campaign-from-yyyy'); ?>/<?php the_field('campaign-from-mm'); ?>/<?php the_field('campaign-from-dd'); ?>-<?php the_field('campaign-to-mm'); ?>/<?php the_field('campaign-to-dd'); ?></p>
                       <p class="campaign-card__text4">ご予約・お問い合わせはコチラ</p>
                       <div class="campaign-card__button">
-                        <a href="#" class="button"><span>contact&nbsp;us</span></a>
+                        <a href="<?php echo $contact; ?>" class="button"><span>contact&nbsp;us</span></a>
                       </div>
                     </div>
                   </div>

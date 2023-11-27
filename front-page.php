@@ -84,7 +84,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
       <ul class="campaign-cards__items swiper-wrapper">
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <li class="campaign-cards__item campaign-card swiper-slide">
-          <a href="#">
+          <div class="campaign-card__group">
             <div class="campaign-card__img-wrap">
               <?php if (has_post_thumbnail()) : ?>
                 <div class="campaign-card__image">
@@ -112,7 +112,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                   <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__price">
 
-                    <div class="campaign-card__price">
                       <?php if (get_field('campaign-before')) : ?>
                         <?php $campaign_before = floatval(str_replace(',', '', get_field('campaign-before'))); ?>
                         <p class="campaign-card__price-before">&yen;<?php echo number_format($campaign_before); ?></p>
@@ -123,17 +122,15 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                         <p class="campaign-card__price-after">&yen;<?php echo number_format($campaign_after); ?></p>
                       <?php endif; ?>
 
-                    </div>
-
                   </div>
                 </div>
             </div>
-          </a>
+          </div>
         </li>
         <?php endwhile; ?>
         <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <li class="campaign-cards__item campaign-card swiper-slide">
-          <a href="#">
+          <div class="campaign-card__group">
             <div class="campaign-card__img-wrap">
               <?php if (has_post_thumbnail()) : ?>
                 <div class="campaign-card__image">
@@ -161,7 +158,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                   <p class="campaign-card__text">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__price">
 
-                    <div class="campaign-card__price">
                       <?php if (get_field('campaign-before')) : ?>
                         <?php $campaign_before = floatval(str_replace(',', '', get_field('campaign-before'))); ?>
                         <p class="campaign-card__price-before">&yen;<?php echo number_format($campaign_before); ?></p>
@@ -172,12 +168,10 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                         <p class="campaign-card__price-after">&yen;<?php echo number_format($campaign_after); ?></p>
                       <?php endif; ?>
 
-                    </div>
-
                   </div>
                 </div>
             </div>
-          </a>
+          </div>
         </li>
         <?php endwhile; ?>
         </ul>
@@ -187,7 +181,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
     <div class="swiper-button-prev top-campaign__swiper-button-prev js-top-campaign-swiper-button-prev u-desktop"></div>
     <div class="swiper-button-next top-campaign__swiper-button-next js-top-campaign-swiper-button-next u-desktop"></div>
     <div class="top-campaign__button">
-      <a href="#" class="button"><span>view&nbsp;more</span></a>
+      <a href="<?php echo $campaign; ?>" class="button"><span>view&nbsp;more</span></a>
     </div>
   </div>
 </section>
@@ -205,14 +199,14 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/top-about-img2.jpg" alt="海中で黄色の魚が泳ぐ様子" />
       </div>
     </div>
-    <div class="about-image__content-wrap">
-      <h3 class="about-image__content-title">Dive&nbsp;into<br />the&nbsp;Ocean</h3>
-      <div class="about-image__content-text-wrap">
+    <div class="about-image__content-wrap about-image__content-wrap--top">
+      <h3 class="about-image__content-title about-image__content-title--top">Dive&nbsp;into<br />the&nbsp;Ocean</h3>
+      <div class="about-image__content-text-wrap about-image__content-text-wrap--top">
         <p class="about-image__content-text">
           ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
         </p>
         <div class="about-image__button">
-          <a href="#" class="button"><span>view&nbsp;more</span></a>
+          <a href="<?php echo $about; ?>" class="button"><span>view&nbsp;more</span></a>
         </div>
       </div>
     </div>
@@ -234,7 +228,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
           当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
         </p>
         <div class="top-information__button">
-          <a href="#" class="button"><span>view&nbsp;more</span></a>
+          <a href="<?php echo $information; ?>" class="button"><span>view&nbsp;more</span></a>
         </div>
       </div>
     </div>
@@ -285,7 +279,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
     <?php wp_reset_postdata(); ?>
     <?php endif; ?>
     <div class="top-blog__button">
-      <a href="#" class="button"><span>view&nbsp;more</span></a>
+      <a href="<?php echo $blog; ?>" class="button"><span>view&nbsp;more</span></a>
     </div>
   </div>
 </section>
@@ -334,7 +328,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
             <?php endif; ?>
             </div>
           </div>
-          <p class="voice-card__text"><?php echo esc_html(get_field('voice_text')); ?></p>
+          <p class="voice-card__text"><?php echo esc_html(get_field('voice-text')); ?></p>
         </a>
       </li>
       <?php endwhile; ?>

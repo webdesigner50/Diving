@@ -12,8 +12,10 @@ get_header();
         <?php get_template_part('template/page-head'); ?>
     </div>
   </div>
-  <!-- パンくず -->
-  <?php get_template_part('parts/breadcrumb') ?>
+  <!-- ぱんくず -->
+  <div class="breadcrumb layout-breadcrumb inner">
+    <?php get_template_part('template/breadcrumb'); ?>
+  </div>
 
   <div class="contact-thanks layout-contact-thanks">
     <div class="contact-thanks__inner inner">
