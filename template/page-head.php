@@ -49,7 +49,7 @@ if (is_post_type_archive('campaign') || is_tax('campaign_category')) {
 
   //よくある質問
 } elseif (is_page('faq')) {
-  $page_title = 'faq';
+  $page_title = 'FAQ';
   $page_img_sp = '/assets/images/common/faq-mv-sp-img.jpg';
   $page_img_pc = '/assets/images/common/faq-mv-pc-img.jpg';
   $alt = '浜辺の写真';

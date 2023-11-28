@@ -186,7 +186,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
   </div>
 </section>
 <section class="top-about about-image layout-top-about">
-  <div class="about-image__inner inner">
+  <div class="about-image__inner about-image__inner--top inner">
     <div class="about-image__title title">
       <p class="title__sub">about&nbsp;us</p>
       <h2 class="title__main">私たちについて</h2>

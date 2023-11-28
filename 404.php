@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 
-      <section class="status-404">
+      <section class="status-404 layout-status-404">
         <div class="status-404__inner inner">
       <!-- ぱんくず -->
-      <div class="breadcrumb layout-breadcrumb inner">
+      <div class="breadcrumb breadcrumb--status-404 layout-breadcrumb--status-404 inner">
         <?php get_template_part('template/breadcrumb'); ?>
       </div>
           <div class="status-404__contents">

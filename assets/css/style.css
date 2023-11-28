@@ -157,12 +157,8 @@ a {
 	transition: opacity 0.3s;
 }
 
-.layout-breadcrumb {
-	margin-top: 0.5rem;
-}
-
 .layout-breadcrumb--status-404 {
-	margin-top: 5rem;
+	padding-top: 0.5rem;
 }
 
 .layout-campaign {
@@ -196,6 +192,10 @@ a {
 
 .layout-sitemap {
 	margin-top: 0;
+}
+
+.layout-status-404 {
+	padding-top: 5rem;
 }
 
 .layout-terms-of-ervice {
@@ -857,11 +857,12 @@ a {
 	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.5;
+	margin-left: 1.5em;
 	position: relative;
 }
 
-.blog-contents-main__body li {
-	background-image: url(../images/common/starfish.png);
+.blog-contents-main__body li::before {
+	background-image: url(../images/common/blog-starfish-img.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -981,6 +982,7 @@ a {
 	font-family: "Gotu", "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 300;
+	padding-top: 0.5rem;
 }
 
 .breadcrumb--status-404 {
@@ -2650,7 +2652,7 @@ html.is-fixed {
 	content: "";
 	height: 21.5625rem;
 	position: absolute;
-	top: -1.5625rem;
+	top: 0;
 	width: 21.5625rem;
 	z-index: -1;
 }
@@ -2667,6 +2669,10 @@ html.is-fixed {
 
 .status-404__text {
 	margin-top: -1.25rem;
+}
+
+.status-404__button {
+	margin-top: 5rem;
 }
 
 .tab-whale-icon span {
@@ -3208,7 +3214,7 @@ html {
 }
 
 .layout-breadcrumb--status-404 {
-	margin-top: 5.625rem;
+	padding-top: 0.5rem;
 }
 
 .layout-campaign {
@@ -3241,6 +3247,10 @@ html {
 
 .layout-sitemap {
 	margin-top: 2.5rem;
+}
+
+.layout-status-404 {
+	padding-top: 5.625rem;
 }
 
 .layout-terms-of-ervice {
@@ -3394,6 +3404,17 @@ html {
 	height: 8.625rem;
 	max-width: 80rem;
 	width: 18.8125rem;
+}
+
+.about-image__inner--top::after {
+	background: url(../images/common/top-about-coral.png) no-repeat top/contain;
+	bottom: -5.625rem;
+	content: "";
+	display: block;
+	height: 11.3125rem;
+	position: absolute;
+	right: calc(50% - min(48.4vw, 39.875rem));
+	width: 12.125rem;
 }
 
 .about-image__img-small img {
@@ -4208,7 +4229,6 @@ html {
 
 .status-404 {
 	padding-bottom: 9.375rem;
-	padding-top: 3.75rem;
 }
 
 .status-404__inner::before {
@@ -4216,16 +4236,12 @@ html {
 	height: 43.625rem;
 	left: -10.625rem;
 	max-width: 80rem;
-	top: -5rem;
+	top: -0.625rem;
 	width: 43.625rem;
 }
 
 .status-404__title {
 	font-size: 10rem;
-}
-
-.status-404__button {
-	margin-top: 5rem;
 }
 
 .blog-contents-main__body li span {

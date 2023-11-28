@@ -8,7 +8,7 @@
   // max-width: rem(600);
   @include mq("md") {
     // max-width: rem(1080);
-    padding-top: rem(60);
+    // padding-top: rem(60);
     padding-bottom: rem(150);
   }
 }
@@ -26,7 +26,7 @@
   position: absolute;
   width: rem(345);
   height: rem(345);
-  top: rem(-25);
+  top: 0;
   background-image: url(../images/common/404-whale-sp.png);
   background-repeat: no-repeat;
   background-size: rem(345) rem(345);
@@ -36,7 +36,7 @@
     width: rem(698);
     height: rem(698);
     max-width: rem(1280);
-    top: rem(-80);
+    top: rem(-10);
     left: rem(-170);
     background-size: rem(698) rem(698);
   }
@@ -56,7 +56,5 @@
   margin-top: rem(-20);
 }
 .status-404__button {
-  @include mq("md") {
-    margin-top: rem(80);
-  }
+  margin-top: rem(80);
 }

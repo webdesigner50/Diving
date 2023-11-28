@@ -40,15 +40,16 @@
   line-height: calc(24 / 16);
   font-weight: $regular;
   font-family: "Noto Sans JP", sans-serif;
+  margin-left: 1.5em;
 }
-.blog-contents-main__body li {
+.blog-contents-main__body li::before {
   content: "";
   position: absolute;
   width: rem(18);
   height: rem(18);
   top: rem(2);
   left: rem(-25);
-  background-image: url(../images/common/starfish.png);
+  background-image: url(../images/common/blog-starfish-img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
