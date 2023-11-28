@@ -374,19 +374,21 @@ jQuery(function ($) {
   $(document).ready(function () {
     // 初期状態で最初の年の月リストを表示し、▶︎を▼に変更
     $(".blog-archive__list:first-of-type .blog-archive__month").css("display", "block");
-    $(".blog-archive__list:first-of-type .js-side-archive").addClass("open");
 
     // 最初の年に open クラスを付ける
     $(".blog-archive__list:first-of-type .js-side-archive").addClass("open");
     $(".js-side-archive").on("click", function () {
-      // クリックされた年の次の要素（月リスト）をアニメーション付きで表示/非表示
-      $(this).next().slideToggle(300);
-      // 他の年の要素を閉じるため、兄弟要素の年についても処理する
-      $(".js-side-archive").not(this).next().slideUp(300);
-      // クリックされた年の要素に「open」クラスをトグル（追加/削除）
-      $(this).toggleClass("open");
-      // 他の年の要素から「open」クラスを削除
+      // 年の要素から「open」クラスを削除
       $(".js-side-archive").not(this).removeClass("open");
+
+      // 月リストを閉じる
+      $(".blog-archive__list .blog-archive__month").css("display", "none");
+
+      // クリックされた年の月リストを表示
+      $(this).next().slideToggle(300);
+
+      // クリックされた年の要素に「open」クラスを追加
+      $(this).toggleClass("open");
     });
   });
   //アコーディオン

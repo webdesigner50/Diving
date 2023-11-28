@@ -3077,7 +3077,6 @@ html.is-fixed {
 .voice-card__title-wrap {
 	border-bottom: 0.0625rem solid #408f95;
 	margin-right: 0.8125rem;
-	max-width: 9.3125rem;
 	width: calc(51.758% - 0.8125rem);
 }
 
