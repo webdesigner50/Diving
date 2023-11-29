@@ -42,7 +42,7 @@ textarea {
   background-image: none;
   font-family: inherit;
   /*↓カスタム */
-  margin-top: rem(10);
+  // margin-top: rem(10);
   font-size: $fz;
   padding: $padding-und $padding-lnr;
   width: 100%;
@@ -66,60 +66,62 @@ textarea {
 .contact-form__select,
 .contact-form__textarea {
   text-align: left;
+  padding-top: rem(24);
+  padding-bottom: rem(24);
   @include mq("md") {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
   }
 }
 .contact-form dt {
   width: 100%;
+  text-align: left;
   @include mq("md") {
-    width: 40%;
+    width: 45%;
   }
 }
 
 .contact-form dd {
   width: 100%;
   @include mq("md") {
-    width: 50%;
+    // display: flex;
+    // justify-content: start;
+    // align-items: start;
+    width: 100%;
   }
 }
 .contact-form__name {
-  margin-top: rem(15);
-  padding-bottom: rem(25);
   border-bottom: 1px dashed $green1;
   @include mq("md") {
-    margin-top: rem(-10);
   }
 }
 .contact-form__name-input {
   padding: rem(9) rem(16);
   @include mq("md") {
+    margin-left: rem(-65);
   }
 }
 
 .contact-form__email {
-  margin-top: rem(25);
-  padding-bottom: rem(25);
   border-bottom: 1px dashed $green1;
   @include mq("md") {
-    margin-top: rem(40);
   }
 }
 .contact-form__email-input {
   padding: rem(8) rem(16) rem(8);
+  @include mq("md") {
+    margin-left: rem(-65);
+  }
 }
 // [type="tel"] {
 //   max-width: rem(200);
 // }
 .contact-form__tel {
-  margin-top: rem(25);
-  padding-bottom: rem(25);
   border-bottom: 1px dashed $green1;
   width: 100%;
   @include mq("md") {
-    margin-top: rem(40);
   }
 }
 // .contact-form__tel dd {
@@ -175,7 +177,7 @@ textarea {
       transform: translateY(-50%) rotate(-45deg);
       width: 10px;
       height: 5px;
-      margin-top: -0.25em;
+      // margin-top: -0.25em;
       margin-left: 0.15em;
       border-left: 2px solid red;
       border-bottom: 2px solid red;
@@ -185,21 +187,20 @@ textarea {
   }
 }
 .contact-form__checkbox1 {
-  margin-top: rem(25);
-  padding-bottom: rem(22);
   border-bottom: 1px dashed $green1;
   @include mq("md") {
-    margin-top: rem(20);
   }
 }
 
 .contact-form__checkbox1-data {
-  margin-top: rem(20);
+  // margin-top: rem(20);
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  margin-left: rem(-5);
   @include mq("md") {
-    margin-left: rem(-10);
-    margin-top: rem(35);
+    margin-top: rem(-15);
+    margin-left: rem(-5);
   }
 }
 
@@ -212,9 +213,9 @@ select {
   cursor: pointer;
   width: 100%;
   /*↓カスタム */
-  margin-top: rem(10);
+  // margin-top: rem(10);
   font-size: rem(12);
-  padding: $padding-und $padding-lnr;
+  // padding: $padding-und $padding-lnr;
   background-color: $back-cr;
   border: 1px solid $green1;
   border-radius: $border-r;
@@ -229,16 +230,20 @@ select {
   // }
 }
 .contact-form__select {
-  margin-top: rem(25);
-  padding-bottom: rem(22);
   border-bottom: 1px dashed $green1;
   @include mq("md") {
-    margin-top: rem(50);
   }
 }
-// .contact-form__select-data-input {
-//   padding: rem(11) rem(8);
-// }
+.contact-form__select dd {
+  padding: rem(11) rem(8);
+  width: 100%;
+  margin-top: rem(5);
+  margin-left: rem(-5);
+  @include mq("md") {
+    margin-top: rem(-10);
+    margin-left: rem(20);
+  }
+}
 // [type="date"] {
 //   position: relative;
 //   /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
@@ -259,29 +264,27 @@ select {
 // }
 
 .contact-form__textarea {
-  margin-top: rem(30);
   align-items: start;
   @include mq("md") {
-    margin-top: rem(30);
   }
 }
 .contact-form__textarea dt {
   @include mq("md") {
-    margin-top: rem(10);
-    margin-bottom: auto;
   }
 }
 .contact-form__textarea-data-input {
   height: rem(200);
   padding: rem(8) rem(16);
+  @include mq("md") {
+    margin-left: rem(-65);
+  }
 }
 
 .contact-form__checkbox2 {
-  margin-top: rem(50);
   margin-left: rem(30);
   text-align: center;
   @include mq("md") {
-    margin-left: rem(170);
+    margin-left: rem(50);
   }
 }
 .contact-form__checkbox2-input {
@@ -444,4 +447,11 @@ div.wpcf7-aborted {
   border-color: transparent;
   color: $red;
   text-align: center;
+}
+.wpcf7-form-control-wrap,
+.wpcf7-form-control {
+  width: 100%;
+  @include mq("md") {
+    width: 100%;
+  }
 }

@@ -163,7 +163,7 @@ function add_origin_thanks_page()
   echo <<< EOC
     <script>
       document.addEventListener( 'wpcf7mailsent', function( event ) {
-        location = 'http://diving.local/contact/thanks/';
+        location = 'http://laketown-web.site/contact/thanks/';
       }, false );
     </script>
    EOC;

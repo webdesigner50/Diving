@@ -1352,9 +1352,8 @@ textarea {
 	border: 1px solid #408f95;
 	border-radius: 0;
 	border-radius: rem(6);
-	font-family: inherit;
-	font-size: rem(16); /*↓カスタム */
-	margin-top: 0.625rem;
+	font-family: inherit; /*↓カスタム */
+	font-size: rem(16);
 	padding: rem(10) rem(10);
 	width: 100%; /*↓↓↓↓不要ならコメントアウト or 削除 */ /*↓↓選択されているときの色*/
 }
@@ -1376,10 +1375,13 @@ textarea:focus {
 .contact-form__checkbox1,
 .contact-form__select,
 .contact-form__textarea {
+	padding-bottom: 1.5rem;
+	padding-top: 1.5rem;
 	text-align: left;
 }
 
 .contact-form dt {
+	text-align: left;
 	width: 100%;
 }
 
@@ -1389,8 +1391,6 @@ textarea:focus {
 
 .contact-form__name {
 	border-bottom: 1px dashed #408f95;
-	margin-top: 0.9375rem;
-	padding-bottom: 1.5625rem;
 }
 
 .contact-form__name-input {
@@ -1399,8 +1399,6 @@ textarea:focus {
 
 .contact-form__email {
 	border-bottom: 1px dashed #408f95;
-	margin-top: 1.5625rem;
-	padding-bottom: 1.5625rem;
 }
 
 .contact-form__email-input {
@@ -1409,8 +1407,6 @@ textarea:focus {
 
 .contact-form__tel {
 	border-bottom: 1px dashed #408f95;
-	margin-top: 1.5625rem;
-	padding-bottom: 1.5625rem;
 	width: 100%;
 }
 
@@ -1458,7 +1454,6 @@ textarea:focus {
 	height: 5px;
 	left: 0;
 	margin-left: 0.15em;
-	margin-top: -0.25em;
 	opacity: 1;
 	position: absolute;
 	top: 50%; /*チェックマークじゃない場合は以下を変更する*/
@@ -1469,14 +1464,13 @@ textarea:focus {
 
 .contact-form__checkbox1 {
 	border-bottom: 1px dashed #408f95;
-	margin-top: 1.5625rem;
-	padding-bottom: 1.375rem;
 }
 
 .contact-form__checkbox1-data {
 	display: flex;
 	flex-direction: column;
-	margin-top: 1.25rem;
+	justify-content: start;
+	margin-left: -0.3125rem;
 }
 
 select { /*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
@@ -1490,22 +1484,24 @@ select { /*↓デフォルトのアイコンを消す場合はコメントアウ
 	border-radius: rem(6);
 	color: inherit;
 	cursor: pointer;
-	font-family: inherit;
-	font-size: 0.75rem; /*↓カスタム */
-	margin-top: 0.625rem;
-	padding: rem(10) rem(10);
+	font-family: inherit; /*↓カスタム */
+	font-size: 0.75rem;
 	width: 100%; /*↓デフォルトではないアイコンを使う場合は入力する*/
 }
 
 .contact-form__select {
 	border-bottom: 1px dashed #408f95;
-	margin-top: 1.5625rem;
-	padding-bottom: 1.375rem;
+}
+
+.contact-form__select dd {
+	margin-left: -0.3125rem;
+	margin-top: 0.3125rem;
+	padding: 0.6875rem 0.5rem;
+	width: 100%;
 }
 
 .contact-form__textarea {
 	align-items: start;
-	margin-top: 1.875rem;
 }
 
 .contact-form__textarea-data-input {
@@ -1515,7 +1511,6 @@ select { /*↓デフォルトのアイコンを消す場合はコメントアウ
 
 .contact-form__checkbox2 {
 	margin-left: 1.875rem;
-	margin-top: 3.125rem;
 	text-align: center;
 }
 
@@ -1634,6 +1629,11 @@ div.wpcf7-aborted {
 	border-color: transparent;
 	color: #c94800;
 	text-align: center;
+}
+
+.wpcf7-form-control-wrap,
+.wpcf7-form-control {
+	width: 100%;
 }
 
 .inner.contact-result__inner {
@@ -3814,59 +3814,46 @@ html {
 .contact-form__checkbox1,
 .contact-form__select,
 .contact-form__textarea {
-	align-items: center;
 	display: flex;
-	justify-content: space-between;
+	width: 100%;
 }
 
 .contact-form dt {
-	width: 40%;
+	width: 45%;
 }
 
 .contact-form dd {
-	width: 50%;
+	width: 100%;
 }
 
-.contact-form__name {
-	margin-top: -0.625rem;
+.contact-form__name-input {
+	margin-left: -4.0625rem;
 }
 
-.contact-form__email {
-	margin-top: 2.5rem;
-}
-
-.contact-form__tel {
-	margin-top: 2.5rem;
+.contact-form__email-input {
+	margin-left: -4.0625rem;
 }
 
 .contact-form__tel-input {
 	margin-left: -4.0625rem;
 }
 
-.contact-form__checkbox1 {
-	margin-top: 1.25rem;
-}
-
 .contact-form__checkbox1-data {
-	margin-left: -0.625rem;
-	margin-top: 2.1875rem;
+	margin-left: -0.3125rem;
+	margin-top: -0.9375rem;
 }
 
-.contact-form__select {
-	margin-top: 3.125rem;
+.contact-form__select dd {
+	margin-left: 1.25rem;
+	margin-top: -0.625rem;
 }
 
-.contact-form__textarea {
-	margin-top: 1.875rem;
-}
-
-.contact-form__textarea dt {
-	margin-bottom: auto;
-	margin-top: 0.625rem;
+.contact-form__textarea-data-input {
+	margin-left: -4.0625rem;
 }
 
 .contact-form__checkbox2 {
-	margin-left: 10.625rem;
+	margin-left: 3.125rem;
 }
 
 .contact-form__checkbox2-data span::before {
@@ -3876,6 +3863,11 @@ html {
 
 .contact-form__button {
 	margin-top: 2.3125rem;
+}
+
+.wpcf7-form-control-wrap,
+.wpcf7-form-control {
+	width: 100%;
 }
 
 .inner.contact-result__inner {
