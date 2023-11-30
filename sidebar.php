@@ -31,7 +31,7 @@ $contact = esc_url( home_url( '/contact/' ) );
                     <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('thumbnail'); ?>
                     <?php else : ?>
-                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/dist/assets/images/common/no-image.jpg"
+                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/no-image.jpg"
                         alt="画像なし">
                     <?php endif; ?>
                 </div>
@@ -65,7 +65,7 @@ $contact = esc_url( home_url( '/contact/' ) );
                     <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium'); ?>
                     <?php else : ?>
-                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/dist/assets/images/common/no-image.jpg" alt="画像なし">
+                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/no-image.jpg" alt="画像なし">
                     <?php endif; ?>
                 </div>
                 <div class="blog-reviews__body">
@@ -105,7 +105,7 @@ $contact = esc_url( home_url( '/contact/' ) );
                 <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium'); ?>
                     <?php else : ?>
-                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/dist/assets/images/common/no-image.jpg" alt="画像なし">
+                    <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/no-image.jpg" alt="画像なし">
                     <?php endif; ?>
                 </div>
                 <div class="campaign-card__body campaign-card__body--sub">

@@ -34,7 +34,7 @@
                   <?php the_post_thumbnail(); ?>
                 <?php else : ?>
                   <!-- アイキャッチ画像指定されていない場合に代替画像を表示 -->
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no_image.jpg;" alt="画像がありません">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.jpg;" alt="画像がありません">
                 <?php endif; ?>
                 </div>
 

@@ -92,7 +92,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                 </div>
                 <?php else : ?>
                 <div class="campaign-card__image">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/common/no-image.jpg"
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/no-image.jpg"
                     alt="画像無し">
                 </div>
               <?php endif; ?>
@@ -138,7 +138,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                 </div>
                 <?php else : ?>
                 <div class="campaign-card__image">
-                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/common/no-image.jpg"
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/no-image.jpg"
                     alt="画像無し">
                 </div>
               <?php endif; ?>
@@ -203,7 +203,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
       <h3 class="about-image__content-title about-image__content-title--top">Dive&nbsp;into<br />the&nbsp;Ocean</h3>
       <div class="about-image__content-text-wrap about-image__content-text-wrap--top">
         <p class="about-image__content-text">
-          ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+        スキューバーダイビングは、普段は見ることのできない海の中の世界を間近で体感できるのが魅力でしょう。さまざまな種類のサンゴや魚が見られ、海の生き物の暮らしを肌で感じられます。<br />また、ウミガメと遭遇する確率も非常に高く、ウミガメと一緒に泳ぐといった神秘的な体験も期待できるでしょう。
         </p>
         <div class="about-image__button">
           <a href="<?php echo $about; ?>" class="button"><span>view&nbsp;more</span></a>
@@ -261,7 +261,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
             <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('medium'); ?>
             <?php else : ?>
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/dist/assets/images/common/no-image.jpg"
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/common/no-image.jpg"
               alt="画像無し">
             <?php endif; ?>
           </div>

@@ -23,7 +23,7 @@
                       <?php if (has_post_thumbnail()) { ?>
                       <?php the_post_thumbnail('medium'); ?>
                       <?php } else { ?>
-                      <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/dist/assets/images/common/no-image.jpg"
+                      <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/no-image.jpg"
                         alt="画像なし">
                       <?php } ?>
                     </div>

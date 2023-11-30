@@ -29,8 +29,8 @@ jQuery(function ($) {
     speed: 3000,
     allowTouchMove: false,
     autoplay: {
-      delay: 3000,
-    },
+      delay: 3000
+    }
   });
   var swiper = new Swiper(".js-top-campaign-swiper", {
     loop: true,
@@ -38,24 +38,24 @@ jQuery(function ($) {
     breakpoints: {
       768: {
         slidesPerView: 3.29,
-        spaceBetween: 30,
+        spaceBetween: 30
       },
       1024: {
         slidesPerView: 3.49,
-        spaceBetween: 40,
-      },
+        spaceBetween: 40
+      }
     },
     spaceBetween: 24,
     speed: 2000,
     autoplay: {
       delay: 1000,
-      disableOnInteraction: false,
+      disableOnInteraction: false
     },
     // Navigation arrows
     navigation: {
       nextEl: ".js-top-campaign-swiper-button-next",
-      prevEl: ".js-top-campaign-swiper-button-prev",
-    },
+      prevEl: ".js-top-campaign-swiper-button-prev"
+    }
   });
 
   // ページトップボタン
@@ -78,7 +78,7 @@ jQuery(function ($) {
       var footHeight = $("footer").innerHeight();
       if (scrollHeight - scrollPosition <= footHeight) {
         $(".js-top-pagetop").css({
-          "border-color": "#fff",
+          "border-color": "#fff"
         });
         //ドキュメントスタイルの取得
         var sheets = document.styleSheets;
@@ -89,7 +89,7 @@ jQuery(function ($) {
         sheet.insertRule(".js-top-pagetop::after { background-color:#fff }", sheet.cssRules.length);
       } else {
         $(".js-top-pagetop").css({
-          "border-color": "#408F95",
+          "border-color": "#408F95"
         });
         var sheets = document.styleSheets;
         var sheet = sheets[sheets.length - 1];
@@ -98,13 +98,9 @@ jQuery(function ($) {
       }
     });
     pageTop.click(function () {
-      $("body,html").animate(
-        {
-          scrollTop: 0,
-        },
-        500,
-        "swing"
-      );
+      $("body,html").animate({
+        scrollTop: 0
+      }, 500, "swing");
       return false;
     });
   });
@@ -124,27 +120,18 @@ jQuery(function ($) {
     //inviewを使って背景色が画面に現れたら処理をする
     color.on("inview", function () {
       if (counter == 0) {
-        $(this)
-          .delay(200)
-          .animate(
-            {
-              width: "100%",
-            },
-            speed,
-            function () {
-              image.css("opacity", "1");
-              $(this).css({
-                left: "0",
-                right: "auto",
-              });
-              $(this).animate(
-                {
-                  width: "0%",
-                },
-                speed
-              );
-            }
-          );
+        $(this).delay(200).animate({
+          width: "100%"
+        }, speed, function () {
+          image.css("opacity", "1");
+          $(this).css({
+            left: "0",
+            right: "auto"
+          });
+          $(this).animate({
+            width: "0%"
+          }, speed);
+        });
         counter = 1;
       }
     });
@@ -272,12 +259,9 @@ jQuery(function ($) {
       // クリックされたリンクのhref属性の値（ターゲットセクションのID）を取得します。
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? "html" : href);
-      $("html, body").animate(
-        {
-          scrollTop: target.offset().top,
-        },
-        speed
-      );
+      $("html, body").animate({
+        scrollTop: target.offset().top
+      }, speed);
       // リンクをクリックした後に、実際のリンク先にジャンプしないようにします。
       return false;
     });
@@ -295,13 +279,9 @@ jQuery(function ($) {
       // さらに微調整
       // position -= headerHeight; // 24px だけタブメニューがかかる程度に調整
 
-      $("body,html").animate(
-        {
-          scrollTop: position,
-        },
-        500,
-        "swing"
-      );
+      $("body,html").animate({
+        scrollTop: position
+      }, 500, "swing");
     }
   });
 
@@ -372,36 +352,23 @@ jQuery(function ($) {
 
   //ローディングアニメーション
   var op = gsap.timeline();
-  op.fromTo(
-    ".loader__text",
-    {
-      opacity: 1,
-    },
-    {
-      opacity: 0,
-    },
-    "+=1"
-  );
-  op.fromTo(
-    ".loader__line",
-    {
-      yPercent: 0,
-    },
-    {
-      yPercent: -100,
-      duration: 1,
-      stagger: {
-        each: 0.2,
-        ease: Power4.easeInOut,
-      },
+  op.fromTo(".loader__text", {
+    opacity: 1
+  }, {
+    opacity: 0
+  }, "+=1");
+  op.fromTo(".loader__line", {
+    yPercent: 0
+  }, {
+    yPercent: -100,
+    duration: 1,
+    stagger: {
+      each: 0.2,
+      ease: Power4.easeInOut
     }
-  ).to(
-    ".loader",
-    {
-      display: "none",
-    },
-    ">"
-  );
+  }).to(".loader", {
+    display: "none"
+  }, ">");
 
   // アコーディオン - blog-archive
   $(document).ready(function () {
@@ -447,14 +414,12 @@ jQuery(function ($) {
         event.preventDefault();
         if ($(this).parent($(accordionDetails)).attr("open")) {
           // アコーディオンを閉じるときの処理
-          $(this)
-            .nextAll($(accordionContent))
-            .slideUp(speed, function () {
-              // アニメーションの完了後にopen属性を取り除く
-              $(this).parent($(accordionDetails)).removeAttr("open");
-              // display:none;を消して、ページ内検索にヒットするようにする
-              $(this).show();
-            });
+          $(this).nextAll($(accordionContent)).slideUp(speed, function () {
+            // アニメーションの完了後にopen属性を取り除く
+            $(this).parent($(accordionDetails)).removeAttr("open");
+            // display:none;を消して、ページ内検索にヒットするようにする
+            $(this).show();
+          });
         } else {
           // アコーディオンを開くときの処理
           // open属性を付ける
@@ -463,21 +428,16 @@ jQuery(function ($) {
           $(this).nextAll($(accordionContent)).hide().slideDown(speed);
         }
       });
-      $(this)
-        .closest(accordionDetails)
-        .find(".close-btn")
-        .on("click", function (eventclosee) {
-          eventclosee.preventDefault();
-          //「閉じる」ボタンがクリックされた場合にsummaryの.is-activeを外す
-          $(this).closest(accordionDetails).find(accordionSummary).removeClass("is-active");
-          //「閉じる」ボタンがクリックされた場合にdetails-contentを閉じる
-          $(this)
-            .closest(accordionContent)
-            .slideUp(speed, function () {
-              //「閉じる」ボタンがクリックされた場合にdetailsのopen属性を外す
-              $(this).closest(accordionDetails).removeAttr("open");
-            });
+      $(this).closest(accordionDetails).find(".close-btn").on("click", function (eventclosee) {
+        eventclosee.preventDefault();
+        //「閉じる」ボタンがクリックされた場合にsummaryの.is-activeを外す
+        $(this).closest(accordionDetails).find(accordionSummary).removeClass("is-active");
+        //「閉じる」ボタンがクリックされた場合にdetails-contentを閉じる
+        $(this).closest(accordionContent).slideUp(speed, function () {
+          //「閉じる」ボタンがクリックされた場合にdetailsのopen属性を外す
+          $(this).closest(accordionDetails).removeAttr("open");
         });
+      });
     });
   });
 
@@ -486,16 +446,4 @@ jQuery(function ($) {
   //   let window_height = window.innerHeight ? window.innerHeight : $(window).innerHeight();
   //   $(".body-404__wrap").css("min-height", window_height + "px");
   // });
-
-  !(function () {
-    const viewport = document.querySelector('meta[name="viewport"]');
-    function switchViewport() {
-      const value = window.outerWidth > 360 ? "width=device-width,initial-scale=1" : "width=360";
-      if (viewport.getAttribute("content") !== value) {
-        viewport.setAttribute("content", value);
-      }
-    }
-    addEventListener("resize", switchViewport, false);
-    switchViewport();
-  })();
 });

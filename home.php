@@ -23,7 +23,7 @@
                       <?php if (has_post_thumbnail()) { ?>
                       <?php the_post_thumbnail('medium'); ?>
                       <?php } else { ?>
-                      <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/dist/assets/images/common/no-image.jpg"
+                      <img src="<?php echo esc_url(get_theme_file_uri('')); ?>/assets/images/common/no-image.jpg"
                         alt="画像なし">
                       <?php } ?>
                     </div>
@@ -33,7 +33,9 @@
                       </div>
                       <h3 class="blog-card__title"><?php the_title() ?></h3>
                       <p class="blog-card__text">
-                        <?php echo substr(nl2br(get_the_content()), 0, 290); ?>
+                        <?php if (get_the_excerpt()) : ?>
+                          <?php echo wp_trim_words(get_the_excerpt(), 89, '...'); ?>
+                        <?php endif; ?>
                       </p>
                     </div>
                   </a>

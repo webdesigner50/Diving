@@ -50,7 +50,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                   <?php the_post_thumbnail(); ?>
                 <?php else : ?>
                   <!-- アイキャッチ画像指定されていない場合に代替画像を表示 -->
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no_image.jpg;" alt="画像がありません">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.jpg;" alt="画像がありません">
                 <?php endif; ?>
                 </div>
 
@@ -97,7 +97,17 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
           </ul>
           <div class="campaign__wp-pagenavi wp-pagenavi">
             <?php wp_pagenavi(); ?>
+            <!-- <?php the_posts_pagination(
+                array(
+                    'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                    'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
+                    'prev_text'     => ('<'), // 「前へ」リンクのテキスト
+                    'next_text'     => ('>'), // 「次へ」リンクのテキスト
+                    'type'          => 'list', // 戻り値の指定 (plain/list)
+                )
+            ); ?> -->
           </div>
+
         </div>
       </section>
 

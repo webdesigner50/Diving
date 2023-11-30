@@ -27,8 +27,9 @@
 .blog-card__body {
   margin-top: rem(22);
 }
-.blog-card__body p {
-  margin-top: rem(16);
+.blog-card__text {
+  margin-top: rem(19);
+  line-height: 1.5;
 }
 .blog-card__date {
   display: inline-block;
@@ -40,8 +41,4 @@
   font-weight: $medium;
   line-height: 1.5;
   border-bottom: rem(1) solid $green1;
-}
-.blog-card__text {
-  // margin-top: rem(19);
-  line-height: 1.5;
 }
