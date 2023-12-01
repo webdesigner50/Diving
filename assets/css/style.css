@@ -1453,7 +1453,7 @@ textarea:focus {
 	margin-left: 0.15em;
 	opacity: 1;
 	position: absolute;
-	top: 50%; /*チェックマークじゃない場合は以下を変更する*/
+	top: 31%; /*チェックマークじゃない場合は以下を変更する*/
 	transform: translateY(-50%) rotate(-45deg);
 	transform: rotate(-45deg);
 	width: 10px;
@@ -1525,7 +1525,7 @@ select { /*↓デフォルトのアイコンを消す場合はコメントアウ
 .contact-form__checkbox2-data span::before {
 	height: 1.375rem;
 	margin-left: -0.25rem;
-	margin-top: -0.0625rem;
+	margin-top: -0.3125rem;
 	width: 1.375rem;
 }
 
@@ -3858,7 +3858,7 @@ html {
 }
 
 .contact-form__checkbox2-data span::before {
-	margin-left: -0.25rem;
+	margin-left: -0.1875rem;
 	margin-top: -0.0625rem;
 }
 
