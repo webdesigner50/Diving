@@ -80,3 +80,10 @@
 // .page-numbers {
 //   display: flex;
 // }
+
+.wp-pagenavi .larger:nth-child(n + 5) {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}

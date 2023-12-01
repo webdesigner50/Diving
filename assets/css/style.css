@@ -3196,6 +3196,10 @@ html.is-fixed {
 	margin-left: 2.125rem;
 }
 
+.wp-pagenavi .larger:nth-child(n+5) {
+	display: none;
+}
+
 @media screen and (min-width: 768px) {
 
 .u-desktop {
@@ -4603,6 +4607,10 @@ html {
 
 .wp-pagenavi__page {
 	justify-content: center;
+}
+
+.wp-pagenavi .larger:nth-child(n+5) {
+	display: block;
 }
 
 }
