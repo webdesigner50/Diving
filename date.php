@@ -33,7 +33,9 @@
                       </div>
                       <h3 class="blog-card__title"><?php the_title() ?></h3>
                       <p class="blog-card__text">
-                        <?php echo substr(nl2br(get_the_content()), 0, 290); ?>
+                        <?php if (get_the_excerpt()) : ?>
+                          <?php echo wp_trim_words(get_the_excerpt(), 89, '...'); ?>
+                        <?php endif; ?>
                       </p>
                     </div>
                   </a>
