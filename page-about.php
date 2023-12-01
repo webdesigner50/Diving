@@ -32,11 +32,8 @@ Template Name: about
             <h3 class="about-image__content-title">Dive&nbsp;into<br />the&nbsp;Ocean</h3>
             <div class="about-image__content-text-wrap">
               <p class="about-image__content-text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              海へのダイブは、広がる海の世界への飛び込みを象徴し、深い青さと多彩な生物が魅せる海の美しさを感じ、透明な水と海底の景色を楽しむことができます。<br>深海の神秘を味わいながら、自然の美しさに触れるこの体験は、驚きと感動に満ちた特別な冒険であり、その美しい瞬間に触れることで、心に深い感動と平穏をもたらすでしょう。
               </p>
-              <div class="about-image__button u-desktop">
-                <a href="#" class="button"><span>view&nbsp;more</span></a>
-              </div>
             </div>
           </div>
         </div>

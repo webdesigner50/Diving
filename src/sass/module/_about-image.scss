@@ -212,7 +212,7 @@
   line-height: 1.5;
   color: $black1;
   @include mq("md") {
-    margin-top: 0;
+    margin-top: rem(20);
     color: $white;
   }
 }
@@ -223,7 +223,6 @@
   @include mq("md") {
   }
 }
-
 .about-image__illustration {
   @include mq("md") {
     position: absolute;
