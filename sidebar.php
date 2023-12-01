@@ -14,11 +14,10 @@ $contact = esc_url( home_url( '/contact/' ) );
             <?php
                 $args = [
                     'post_type' => 'post',
+                    'posts_per_page' => 3,
                     'meta_key' => 'post_views_count',
                     'orderby' => 'meta_value_num',
-                    'posts_per_page' => 3,
                     'order' => 'DESC',
-                    'post__not_in' => [$post->ID]
                 ];
                 $the_view_query = new WP_Query($args);
                 if ($the_view_query->have_posts()):

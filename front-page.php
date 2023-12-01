@@ -270,7 +270,11 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
               <time class="blog-card__date" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
             </div>
             <h3 class="blog-card__title"><?php echo wp_trim_words(get_the_title(), 15, '…'); ?></h3>
-            <p class="blog-card__text"><?php the_excerpt(); ?></p>
+            <p class="blog-card__text">
+              <?php if (get_the_excerpt()) : ?>
+                  <?php echo wp_trim_words(get_the_excerpt(), 89, '...'); ?>
+              <?php endif; ?>
+          </p>
           </div>
         </a>
       </li>
@@ -293,7 +297,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
       $args = array(
         'post_type'  => 'voice',
         'posts_per_page' => 2,
-        'orderby' => 'rand'
+        'orderby' => 'noticed_at  DESC'
       );
       $the_query = new WP_Query($args);
     ?>
@@ -328,7 +332,11 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
             <?php endif; ?>
             </div>
           </div>
-          <p class="voice-card__text"><?php echo esc_html(get_field('voice-text')); ?></p>
+          <p class="voice-card__text">
+            <?php if (esc_html(get_field('voice-text'))) : ?>
+              <?php echo wp_trim_words(esc_html(get_field('voice-text')), 140, '...'); ?>
+            <?php endif; ?>
+          </p>
         </a>
       </li>
       <?php endwhile; ?>
