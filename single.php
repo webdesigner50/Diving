@@ -32,7 +32,7 @@
                   <div>
                   <?php if (has_post_thumbnail()): ?>
                   <div class="blog-detail__image">
-                    <?php the_post_thumbnail('large'); ?>
+                    <?php the_post_thumbnail(); ?>
                   </div>
                   <?php endif; ?>
                   </div>
@@ -41,11 +41,11 @@
                   <div class="blog-contents-main__wp-pagenavi wp-pagenavi wp-pagenavi--detail">
                   <?php if (get_previous_post()):?>
                     <?php previous_post_link('%link', '<'); ?>
-                    <?php endif; ?>
-                    <?php if (get_next_post()):?>
+                  <?php endif; ?>
+                  <?php if (get_next_post()):?>
                     <?php next_post_link('%link', '>'); ?>
-                    <?php endif; ?>
-                  </div>
+                  <?php endif; ?>
+                </div>
                 </div>
               </div>
             <?php endwhile; ?>

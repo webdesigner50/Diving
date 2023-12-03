@@ -91,19 +91,18 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
     <div class="footer__inner inner">
         <div class="footer__wrap">
           <div class="footer__logo">
-            <!-- <a href="index.html"> -->
             <a href="<?php echo $home ; ?>">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/footer-logo.svg" alt="ロゴ画像" />
             </a>
           </div>
           <ul class="footer__sns-links">
             <li class="footer__sns-link">
-              <a href="#">
+              <a href="https://www.facebook.com/" target=”_blank”>
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/footer-facebook.png" alt="facebookのロゴ" />
               </a>
             </li>
             <li class="footer__sns-link">
-              <a href="#">
+              <a href="https://www.instagram.com/" target=”_blank”>
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/footer-Instagram.png" alt="Instagramのロゴ" />
               </a>
             </li>
@@ -116,7 +115,7 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                 <a href="<?php echo $campaign; ?>">キャンペーン</a>
               </li>
               <li class="footer-nav__left-item">
-                <a href="<?php echo $license; ?>">ライセンス取得</a>
+                <a href="<?php echo $license; ?>">ライセンス講習</a>
               </li>
               <li class="footer-nav__left-item">
                 <a href="<?php echo $fun_diving; ?>">ファンダイビング</a>
@@ -205,7 +204,8 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
         <small class="footer__copyright">Copyright&nbsp;&copy;&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.</small>
       </div>
     </footer>
-    <div class="top-pagetop js-top-pagetop"><a href="#"></a></div>
+    <div class="top-pagetop js-top-pagetop">
+      <a href="#"></a></div>
     <?php wp_footer(); ?>
   </body>
 </html>

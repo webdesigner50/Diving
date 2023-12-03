@@ -179,7 +179,7 @@ function add_origin_thanks_page()
   echo <<< EOC
     <script>
       document.addEventListener( 'wpcf7mailsent', function( event ) {
-        location = 'http://laketown-web.site/contact/thanks/';
+        location = 'https://laketown-web.site/codeups/contact/thanks/';
       }, false );
     </script>
    EOC;
@@ -408,3 +408,9 @@ add_filter('wpcf7_form_tag_data_option', 'custom_get_select_values', 10, 3);
 
 // remove_filter('the_content', 'wpautop');
 // remove_filter('the_excerpt', 'wpautop');
+
+//widthとheightの指定を除外
+function remove_img_attributes($html) {
+  return preg_replace('/(width|height)="\d+"\s/', "", $html);
+}
+add_filter('post_thumbnail_html', 'remove_img_attributes');

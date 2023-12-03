@@ -25,7 +25,6 @@
             while (have_posts()) : the_post(); ?>
 
           <li class="campaign-cards__item campaign-card">
-              <a class="campaign__link" href="#">
                 <div class="campaign-card__img-wrap">
                   <!-- <img src="./assets/images/common/top-slide-img1.jpg" alt="海の中を色とりどりの魚が泳ぐ様子" /> -->
 
@@ -70,29 +69,16 @@
                       <p class="campaign-card__text3"><?php the_field('campaign-from-yyyy'); ?>/<?php the_field('campaign-from-mm'); ?>/<?php the_field('campaign-from-dd'); ?>-<?php the_field('campaign-to-mm'); ?>/<?php the_field('campaign-to-dd'); ?></p>
                       <p class="campaign-card__text4">ご予約・お問い合わせはコチラ</p>
                       <div class="campaign-card__button">
-                        <a href="#" class="button"><span>contact&nbsp;us</span></a>
+                        <a href="<?php echo $contact; ?>" class="button"><span>contact&nbsp;us</span></a>
                       </div>
                     </div>
                   </div>
                 </div>
-              </a>
             </li>
             <?php endwhile; endif; ?>
 
           </ul>
           <div class="campaign__wp-pagenavi wp-pagenavi">
-            <!-- <span class="pages">3 / 100</span> -->
-            <!-- <a class="first" href="#">« 先頭</a> -->
-            <!-- <a class="wp-pagenavi__previouspostslink page" rel="prev" href="#"><</a>
-            <div class="wp-pagenavi__page">
-              <span class="current">1</span>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a class="u-desktop" href="#">5</a>
-              <a class="u-desktop" href="#">6</a>
-            </div>
-            <a class="wp-pagenavi__nextpostslink" rel="next" href="#">></a> -->
             <?php wp_pagenavi(); ?>
           </div>
         </div>

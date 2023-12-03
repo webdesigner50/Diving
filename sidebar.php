@@ -194,7 +194,6 @@ $contact = esc_url( home_url( '/contact/' ) );
                                                         $post_count = $query->found_posts;
                                             ?>
 
-                                            <!-- <li><a href="<?php echo $archive_link; ?>"><span><?php echo $month_label; ?></span>(<?php echo $post_count; ?>)</a></li> -->
                                             <li class="blog-archive__month-text"><a href="<?php echo $archive_link; ?>"><span><?php echo $month_label; ?></span></a></li>
                                             <?php
                                                 }

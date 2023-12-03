@@ -5,8 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: rem(16) rem(20);
   @include mq("md") {
-    max-width: rem(744);
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-content: left;
   }
 }

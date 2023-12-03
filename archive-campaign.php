@@ -43,7 +43,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
             while (have_posts()) : the_post(); ?>
 
           <li class="campaign-cards__item campaign-card">
-              <!-- <a class="campaign__link" href="#"> -->
                 <div class="campaign-card__img-wrap">
                   <?php if (has_post_thumbnail()) : ?>
                   <!-- アイキャッチ画像指定されている場合 -->
@@ -90,7 +89,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
                     </div>
                   </div>
                 </div>
-              <!-- </a> -->
             </li>
             <?php endwhile; endif; ?>
 

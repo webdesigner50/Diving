@@ -241,7 +241,7 @@ select {
   margin-left: rem(-5);
   @include mq("md") {
     margin-top: rem(-10);
-    margin-left: rem(20);
+    margin-left: rem(-10);
   }
 }
 // [type="date"] {

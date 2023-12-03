@@ -305,7 +305,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
     <ul class="top-voice__cards voice-cards">
       <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
       <li class="voice-cards__item voice-card">
-        <a href="#">
           <div class="voice-card__title">
             <div class="voice-card__title-wrap">
               <div class="voice-card__meta">
@@ -337,7 +336,6 @@ $sitemap = esc_url( home_url( '/sitemap/' ) );
               <?php echo wp_trim_words(esc_html(get_field('voice-text')), 140, '...'); ?>
             <?php endif; ?>
           </p>
-        </a>
       </li>
       <?php endwhile; ?>
       <?php wp_reset_postdata(); ?>

@@ -49,9 +49,9 @@
               <?php wp_pagenavi(); ?>
               </div>
             </div>
-            <div class="blog-contents__side blog-contents-side layout-blog-contents-side">
+            <aside class="blog-contents__side blog-contents-side layout-blog-contents-side">
               <?php get_sidebar(); ?>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
